@@ -1,12 +1,10 @@
 
 
 .fa {
-    padding: 20px;
     font-size: 30px;
     width: 50px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
   }
   
   .fa:hover {
@@ -14,18 +12,18 @@
   }
 
   .fa-dribbble {
-    background: #ea4c89;
-    color: white;
+    background: white;
+    color: black;
   }
 
   .fa-behance {
-    background: #ea4c89;
-    color: white;
+    background: white;
+    color: black;
   }
 
   .fa-github {
-    background: #ea4c89;
-    color: white;
+    background: white;
+    color: black;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
@@ -53,10 +51,11 @@ img {
 .nav-container {
     background: #aa3e98;
 
-    a{
+    header a{
         color: white;
     }
 }
+
 
 header {
     display: flex;
@@ -78,7 +77,7 @@ header {
         }
 }
 
-.social-header, .superwoman-design {
+.social-header, .purple-macarons {
     display: none;
 }
 
@@ -254,4 +253,49 @@ section {
     .social-header {
         padding: 2em 4em 2em 0;
     }
+
+    section {
+        padding: 4em;
+    }
+
+    .social-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 9em;
+        }
+    }
+
+    .intro-superwoman {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: #9368b7;
+            padding: 6em 8em 6em 4em;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 3em;
+            line-height: 1.2em;
+        }
+    }
+}
+
+.meet {
+    margin: unset;
+}
+
+.purple-macarons {
+    display: unset;
+    width: 65%;
+    margin-top: 170px;
+    position: absolute;
+    margin-left: 500px;
 }

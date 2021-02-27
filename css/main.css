@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 .fa {
-  padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
 }
 
 .fa:hover {
@@ -13,18 +11,18 @@
 }
 
 .fa-dribbble {
-  background: #ea4c89;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .fa-behance {
-  background: #ea4c89;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .fa-github {
-  background: #ea4c89;
-  color: white;
+  background: white;
+  color: black;
 }
 
 body {
@@ -51,7 +49,7 @@ img {
   background: #aa3e98;
 }
 
-.nav-container a {
+.nav-container header a {
   color: white;
 }
 
@@ -81,7 +79,7 @@ header ul a {
   padding: 0 1em;
 }
 
-.social-header, .superwoman-design {
+.social-header, .purple-macarons {
   display: none;
 }
 
@@ -254,5 +252,57 @@ section {
   .social-header {
     padding: 2em 4em 2em 0;
   }
+  section {
+    padding: 4em;
+  }
+  .social-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .social-header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 9em;
+  }
+  .intro-superwoman {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    background: unset;
+    padding: 0;
+  }
+  .intro-superwoman .content {
+    background: #9368b7;
+    padding: 6em 8em 6em 4em;
+    text-align: left;
+  }
+  .intro-superwoman h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+}
+
+.meet {
+  margin: unset;
+}
+
+.purple-macarons {
+  display: unset;
+  width: 65%;
+  margin-top: 170px;
+  position: absolute;
+  margin-left: 500px;
 }
 /*# sourceMappingURL=main.css.map */
