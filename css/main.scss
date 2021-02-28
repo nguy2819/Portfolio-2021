@@ -74,11 +74,11 @@ header {
             display: block;
             padding: .5em 1em;
             font-size: 14px;
-            }
         }
+    }
 }
 
-.social-header, .background-macarons{
+.social-header, .purple-macarons{
     display: none;
 }
 
@@ -120,11 +120,11 @@ section {
 .featured::before {
     content: " ";
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background: #9297c4;
-    top: 0;
+    top: -40px;
     left: 0;
     z-index: -1;
 }
@@ -154,7 +154,7 @@ section {
 }
 
 .skills {
-    background: #84c7d0;
+    background: #E6C1EA;
 }
 
 .skills-container ul li{
@@ -184,12 +184,18 @@ section {
 }
 
 .portfolio {
-    background: white;
+    background: #9297C4;
+    padding-top: 7em;
+}
+
+.portfolio-container a{
+    text-align: right;
 }
 
 .portfolio-container a img {
     border-radius: 1em;
     margin-bottom: 2em;
+    justify-self: end;
 }
 
 @media only screen and (min-width: 800px) {
@@ -217,7 +223,7 @@ section {
         padding-top: 7em;
     }
 
-    .skills-container {
+    .skills-container ul {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 1em;
@@ -232,7 +238,7 @@ section {
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1050px) {
     .intro-superwoman {
         height: 90vh;
     }
@@ -293,13 +299,15 @@ section {
     margin: unset;
 }
 
-.background-macarons {
-    grid-column: 2;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/Removal-89-removebg-preview.png");
-    background-position: -250px;
-    background-repeat: no-repeat;
+.purple-macarons {
+    grid-column: 1;
+    display: unset;
+    width: 65%;
+    margin-top: 180px;
+    position: absolute;
+    margin-left: 500px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .portfolio img {
@@ -322,5 +330,23 @@ section {
 
     .intro-superwoman .content {
         padding: 6em 8em 6em 10em;
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    header {
+        padding: 2em 2em 2em 20em;
+    }
+
+    .social-header {
+        padding: 2em 20em 2em 0;
+    }
+
+    section {
+        padding: 6em 20em 4em 20em;
+    }
+
+    .intro-superwoman .content {
+        padding: 9em 20em 6em 20em;
     }
 }
