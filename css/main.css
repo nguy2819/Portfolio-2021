@@ -81,7 +81,7 @@ header ul a {
   font-size: 14px;
 }
 
-.social-header, .purple-macarons {
+.social-header, .background-macarons {
   display: none;
 }
 
@@ -300,14 +300,6 @@ section {
   margin: unset;
 }
 
-.purple-macarons {
-  display: unset;
-  width: 65%;
-  margin-top: 180px;
-  position: absolute;
-  margin-left: 500px;
-}
-
 .background-macarons {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -319,7 +311,8 @@ section {
 }
 
 .portfolio img {
-  float: right;
+  -ms-grid-column: 2;
+  grid-column: 2;
   max-width: 500px;
 }
 
