@@ -25,25 +25,25 @@
             <ul>
                 <li><a href="#" class="fa fa-dribbble fa-2x"></a></li>
                 <li><a href="#" class="fa fa-behance fa-2x"></a></li>
-                <li><a href="#" class="fa fa-github fa-2x"></a></li>
+                <li><a href="https://github.com/nguy2819" target="_blank" class="fa fa-github fa-2x"></a></li>
             </ul>
         </div>
     </div>
 
     <div class="intro-superwoman">
         <div class="content">
-            <h1>Love it? OR Leave it a message?</h1>
-            <div class="meet">
+            <h1 class="stagger1">Love it? OR Leave it a 💯?</h1>
+            <div class="meet stagger1">
                 <span>👇</span>
                 <p>Meet Tien Borland</p>
             </div>
-            <svg width="40" height="77" viewBox="0 0 40 77">
+            <svg class="stagger1" width="40" height="77" viewBox="0 0 40 77">
                 <g id="scroll" transform="translate(-253 -787)">
                     <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)">
                         <rect width="40" height="77" rx="20" stroke="none"/>
                         <rect x="2" y="2" width="36" height="73" rx="18" fill="none"/>
                     </g>
-                    <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(253 787)"></circle>
+                    <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(262 798)" fill="#fff"/>
                 </g>
             </svg>
         </div>
@@ -128,5 +128,18 @@
             <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
+
+    <script>
+        gsap.registerPluggin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.content', {duration: 2.5, ease: "bounce.out", y: -500})
+        tl.from('.stagger1', {duration: 2, ease: Power4.easeOut, stagger: .3, opacity: 0, y: -50}, "-1.5")
+        tl.from('.purple-macarons', {duration: 1, ease: Power4.easeOut, y: 50, opacity: 0}, "-=2")
+   </script>
 </body>
 </html>
