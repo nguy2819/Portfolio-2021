@@ -123,6 +123,10 @@ section {
   position: relative;
 }
 
+.featured img {
+  border-radius: 1em;
+}
+
 .featured::before {
   content: " ";
   position: absolute;
@@ -382,5 +386,22 @@ section {
     -webkit-transform: translate(262px, 830px);
             transform: translate(262px, 830px);
   }
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #AA3E98;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */

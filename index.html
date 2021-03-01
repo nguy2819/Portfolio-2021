@@ -47,7 +47,7 @@
                 </g>
             </svg>
         </div>
-        <img src="images/Removal-89-removebg-preview.png" alt="purple macarons" class="purple-macarons"/>
+        <img src="images/Removal-89-removebg-preview.png" alt="purple macarons" class="purple-macarons purple-macarons-anim"/>
     </div>
     
 
@@ -55,13 +55,19 @@
         <div class="left">
             <div class="inner transiton2">
                 <p class="subtitle">Featured Project</p>
-                <a href="https://10commandments.vercel.app/" class="featured-title">10 Commandments</a>
+                <div class="tooltip">
+                    <a href="https://github.com/nguy2819/GSAP2-10commandments" class="featured-title" target="_blank">10 Commandments</a>
+                    <span class="tooltiptext">Click to view the raw code on Github</span>
+                </div>
+                
 
                 <p class="featured-desc">A website about 10 Commandments from Heavenly Father in both Vietnamese and English with basic GSAP animations. </p>
             </div>
         </div>
-
-        <img class="right transition2" src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png" alt="Featured 10commandments Project"/>
+        <div class="tooltip">
+            <a href="https://10commandments.vercel.app/" target="_blank"><img class="right transition2" src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png" alt="Featured 10commandments Project"/></a>
+            <span class="tooltiptext">Click to view the website</span>
+        </div>
     </section>
 
     <section class="skills">
@@ -99,7 +105,10 @@
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle">sdvsd</p>
-                    <p class="featured-title">dfvsdfv</p>
+                    <div class="tooltip">
+                        <p class="featured-title">dfvsdfv</p>
+                        <span class="tooltiptext">Click to view the raw code on Github</span>
+                    </div>
                     <p class="featured-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
@@ -110,7 +119,10 @@
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle"></p>
-                    <p class="featured-title"></p>
+                    <div class="tooltip">
+                        <p class="featured-title">dfvsdfv</p>
+                        <span class="tooltiptext">Click to view the raw code on Github</span>
+                    </div>
                     <p class="featured-desc"></p>
                 </div>
             </div>
@@ -121,7 +133,10 @@
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle"></p>
-                    <p class="featured-title"></p>
+                    <div class="tooltip">
+                        <p class="featured-title">dfvsdfv</p>
+                        <span class="tooltiptext">Click to view the raw code on Github</span>
+                    </div>
                     <p class="featured-desc"></p>
                 </div>
             </div>
@@ -134,12 +149,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
 
     <script>
-        gsap.registerPluggin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
+        // var tween = gsap.tween();
         var tl = gsap.timeline();
 
-        tl.from('.content', {duration: 2.5, ease: "bounce.out", y: -500})
-        tl.from('.stagger1', {duration: 2, ease: Power4.easeOut, stagger: .3, opacity: 0, y: -50}, "-1.5")
-        tl.from('.purple-macarons', {duration: 1, ease: Power4.easeOut, y: 50, opacity: 0}, "-=2")
+        tl.from('.content', {duration: 2, ease: Power4.easeOut, y: '-30%'})
+        tl.from('.stagger1', {duration: 2, ease: Power4.easeOut, stagger: .3, opacity: 0, y: -50}, "-=1.5")
+        tl.from('.purple-macarons', {duration: 1, ease: Power4.easeOut, y: 50, opacity: 0}, "-=1.5")
+
+        tl.from('.purple-macarons-anim', {duration: .5, ease: Back.easeOut.config(1.7), stagger: 0, scale: .2}, "-=1")
+
+        // tl.from('.transition2', {
+        //     scrollTrigger: {
+        //         trigger: ".transition2",
+        //         start: "top 80%",
+        //         // toggleActions: "restart pause reverse pause"
+        //     },
+        //     duration: 1.2, 
+        //     opacity: 1,
+        //     y: -50,
+        //     stagger: .3,
+        //     ease: Bounce.easeOut.config(1.7)
+        // })
+
+        // // tl.from('.transition3', {
+        // //     scrollTrigger: {
+        // //         trigger: '.transition3',
+        // //         start: "top center"
+        // //     },
+        // //     duration: 1.2, opacity: 1, y: 50, stagger: .6
+        // // })
+
+
    </script>
 </body>
 </html>
