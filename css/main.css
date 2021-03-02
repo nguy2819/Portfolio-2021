@@ -81,6 +81,12 @@ header ul a {
   font-size: 14px;
 }
 
+header ul a:hover {
+  background: #75dddd;
+  color: black;
+  font-size: 100%;
+}
+
 .social-header, .purple-macarons {
   display: none;
 }
@@ -133,7 +139,7 @@ section {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: #9297c4;
+  background: #84C7D0;
   top: -40px;
   left: 0;
   z-index: -1;
@@ -164,7 +170,7 @@ section {
 }
 
 .skills {
-  background: #E6C1EA;
+  background: #AA3E98;
 }
 
 .skills-container ul li {
@@ -191,7 +197,7 @@ section {
 }
 
 .portfolio {
-  background: #9297C4;
+  background: #84C7D0;
   padding-top: 7em;
 }
 
@@ -391,7 +397,7 @@ section {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: #AA3E98;
+  background-color: #9368B7;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -403,5 +409,13 @@ section {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+#svg-animation {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  z-index: 10000;
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */

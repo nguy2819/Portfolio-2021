@@ -14,13 +14,13 @@
             <a href="index.html" class="logo">Tien Borland</a>
             <nav>
                 <ul>
-                    <li><a href="#">My Work</a></li>
-                    <li><a href="#">My Skills</a></li>
-                    <li><a href="#">Hire me</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#skills">My Skills</a></li>
+                    <li><a href="#" id="hire">Hire me</a></li>
                 </ul>
             </nav>
         </header>
-
+        <div id="svg-animation"></div>
         <div class="social-header">
             <ul>
                 <li><a href="#" class="fa fa-dribbble fa-2x"></a></li>
@@ -32,7 +32,7 @@
 
     <div class="intro-superwoman">
         <div class="content">
-            <h1 class="stagger1">Love it? OR Leave it a 💯?</h1>
+            <h1 class="stagger1">Love it? OR Hire its owner?</h1>
             <div class="meet stagger1">
                 <span>👇</span>
                 <p>Meet Tien Borland</p>
@@ -70,7 +70,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="skills-container">
             <ul>
                 <li class="transition2">
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio-container transition3">
             <div class="portfolio-left">
                 <div class="inner">
@@ -144,6 +144,8 @@
         </div>
     </section>
 
+    <!-- GSAP Animations -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js" integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg==" crossorigin="anonymous"></script>
@@ -180,6 +182,28 @@
         // //     duration: 1.2, opacity: 1, y: 50, stagger: .6
         // // })
 
+
+   </script>
+
+    <!-- Hire Me button Animation -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
+
+   <script>
+       const svgContainer = document.getElementById('svg-animation');
+       const animItem = bodymovin.loadAnimation({
+           wrapper: svgContainer,
+           animType: 'svg',
+           loop: false,
+           autoplay: false,
+           path: 'https://assets7.lottiefiles.com/packages/lf20_u4yrau.json'
+       });
+
+       const hireButton = document.getElementById('hire');
+       hireButton.addEventListener("click", () => {
+           console.log('clicked hire')
+           animItem.goToAndPlay(0, true);
+       })
 
    </script>
 </body>
