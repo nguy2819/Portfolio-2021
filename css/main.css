@@ -21,7 +21,6 @@
 }
 
 .fa-github {
-  background: white;
   color: black;
 }
 
@@ -148,7 +147,7 @@ section {
 .subtitle {
   text-transform: uppercase;
   font-weight: bold;
-  color: #9368b7;
+  color: #AA3E98;
   letter-spacing: .2em;
   font-size: .85em;
 }
@@ -197,7 +196,7 @@ section {
 }
 
 .portfolio {
-  background: #84C7D0;
+  background: #F7F7F7;
   padding-top: 7em;
 }
 
@@ -210,6 +209,11 @@ section {
   margin-bottom: 2em;
   -ms-grid-column-align: end;
       justify-self: end;
+}
+
+.hireme {
+  background: #75dddd;
+  padding: 1em 4em 0.5em 4em;
 }
 
 @media only screen and (min-width: 800px) {
