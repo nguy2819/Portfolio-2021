@@ -14,7 +14,7 @@
             <a href="index.html" class="logo">Tien Borland</a>
             <nav>
                 <ul>
-                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#portfolio" id="work">My Work</a></li>
                     <li><a href="#skills">My Skills</a></li>
                     <li><a href="#hireme" id="hire">Hire me</a></li>
                 </ul>
@@ -107,7 +107,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <div class="portfolio-container transition3">
+        <div class="portfolio-container transition2">
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle">sdvsd</p>
@@ -121,7 +121,7 @@
             <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
         </div>
 
-        <div class="portfolio-container transition3">
+        <div class="portfolio-container transition2">
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle"></p>
@@ -135,7 +135,7 @@
             <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
         </div>
 
-        <div class="portfolio-container transition3">
+        <div class="portfolio-container transition2">
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle"></p>
@@ -172,7 +172,6 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
-        // var tween = gsap.tween();
         var tl = gsap.timeline();
 
         tl.from('.content', {duration: 2, ease: Power4.easeOut, y: '-30%'})
@@ -180,27 +179,19 @@
         tl.from('.purple-macarons', {duration: 1, ease: Power4.easeOut, y: 50, opacity: 0}, "-=1.5")
 
         tl.from('.purple-macarons-anim', {duration: .5, ease: Back.easeOut.config(1.7), stagger: 0, scale: .2}, "-=1")
-
-        // tl.from('.transition2', {
-        //     scrollTrigger: {
-        //         trigger: ".transition2",
-        //         start: "top 80%",
-        //         // toggleActions: "restart pause reverse pause"
-        //     },
-        //     duration: 1.2, 
-        //     opacity: 1,
-        //     y: -50,
-        //     stagger: .3,
-        //     ease: Bounce.easeOut.config(1.7)
-        // })
-
-        // // tl.from('.transition3', {
-        // //     scrollTrigger: {
-        // //         trigger: '.transition3',
-        // //         start: "top center"
-        // //     },
-        // //     duration: 1.2, opacity: 1, y: 50, stagger: .6
-        // // })
+        
+        const portfolioImages = document.querySelectorAll('.transition2');
+        portfolioImages.forEach(image => {
+            gsap.from(image, {
+                scrollTrigger: {
+                    trigger: image,
+                    start: 'top center'
+                },
+                y: -200,
+                opacity: 0,
+                duration: 1.5
+            })
+        })
 
    </script>
 
@@ -221,6 +212,28 @@
        const hireButton = document.getElementById('hire');
        hireButton.addEventListener("click", () => {
            console.log('clicked hire')
+           animItem.goToAndPlay(0, true);
+       })
+
+   </script>
+
+   <!-- My Work button Animation -->
+    
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" integrity="sha512-BB7rb8ZBAxtdJdB7nwDijJH9NC+648xSzviK9Itm+5APTtdpgKz1+82bDl4znz/FBhd0R7pJ/gQtomnMpZYzRw==" crossorigin="anonymous"></script>
+
+   <script>
+       const svgContainer = document.getElementById('svg-animation');
+       const animItem = bodymovin.loadAnimation({
+           wrapper: svgContainer,
+           animType: 'svg',
+           loop: false,
+           autoplay: false,
+           path: 'https://assets8.lottiefiles.com/packages/lf20_16wobr4c.json'
+       });
+
+       const workButton = document.getElementById('work');
+       workButton.addEventListener("click", () => {
+           console.log('clicked work')
            animItem.goToAndPlay(0, true);
        })
 
