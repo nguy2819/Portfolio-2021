@@ -176,7 +176,7 @@ section {
   background: white;
   padding: 2em;
   border-radius: 1em;
-  margin-bottom: 1em;
+  margin-bottom: -1.5em;
 }
 
 .skills-container ul li .icon-container {
@@ -325,8 +325,7 @@ section {
   -ms-grid-column: 1;
   grid-column: 1;
   display: unset;
-  width: 65%;
-  margin-top: 180px;
+  margin-top: 63px;
   position: absolute;
   margin-left: 500px;
   -o-object-fit: cover;
@@ -418,9 +417,8 @@ section {
 #svg-animation {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 30%;
   z-index: 10000;
   pointer-events: none;
-  height: 500px;
 }
 /*# sourceMappingURL=main.css.map */

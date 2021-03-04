@@ -171,7 +171,7 @@ section {
     background: white;
     padding: 2em;
     border-radius: 1em;
-    margin-bottom: 1em;
+    margin-bottom: -1.5em;
 
     .icon-container {
         height: 100px;
@@ -317,8 +317,8 @@ section {
 .purple-macarons {
     grid-column: 1;
     display: unset;
-    width: 65%;
-    margin-top: 180px;
+    // width: 65%;
+    margin-top: 63px;
     position: absolute;
     margin-left: 500px;
     object-fit: cover;
@@ -402,9 +402,8 @@ section {
 #svg-animation{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 30%;
     z-index: 10000;
     pointer-events: none;
-    height: 500px;
 }
 
