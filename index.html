@@ -49,7 +49,7 @@
             </svg>
         </div>
         <!-- <img src="images/Removal-89-removebg-preview.png" alt="purple macarons" class="purple-macarons purple-macarons-anim"/> -->
-        <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_AGoC3n.json" class="purple-macarons purple-macarons-anim"  background="transparent"  speed="1"  style="width: 800px; height: 800px;" hover loop  autoplay></lottie-player>
+        <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_AGoC3n.json" class="purple-macarons purple-macarons-anim"  background="transparent"  speed="1"  style="width: 800px; height: 800px;" hover autoplay></lottie-player>
     </div>
     
 
@@ -58,16 +58,16 @@
             <div class="inner transiton2">
                 <p class="subtitle">Featured Project</p>
                 <div class="tooltip">
-                    <a href="https://github.com/nguy2819/GSAP2-10commandments" class="featured-title" target="_blank">10 Commandments</a>
+                    <a href="https://github.com/nguy2819/THREE.JS-ARollingBall" class="featured-title" target="_blank">A 3D Ball Rolling - THREE.JS</a>
                     <span class="tooltiptext">Click to view the raw code on Github</span>
                 </div>
                 
 
-                <p class="featured-desc">A website about 10 Commandments from Heavenly Father in both Vietnamese and English with basic GSAP animations. </p>
+                <p class="featured-desc">This is a 3D Ball Rolling - created by Three.js with an animated circular SVG text path, the circular text path follow the cursor pointer in a smooth/delayed fashion, and using GSAP to create a simple animation on click to link back to my portfolio.</p>
             </div>
         </div>
         <div class="tooltip">
-            <a href="https://10commandments.vercel.app/" target="_blank"><img class="right transition2" src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png" alt="Featured 10commandments Project"/></a>
+            <a href="https://nguy2819.github.io/THREE.JS-ARollingBall/" target="_blank"><img class="right transition2" src="images/Screen Shot 2021-03-19 at 6.38.56 PM.png" alt="Featured 10commandments Project"/></a>
             <span class="tooltiptext">Click to view the website</span>
         </div>
     </section>
@@ -108,15 +108,33 @@
         <div class="portfolio-container transition2">
             <div class="portfolio-left">
                 <div class="inner">
-                    <p class="subtitle">sdvsd</p>
+                    <p class="subtitle">My Work</p>
                     <div class="tooltip">
-                        <p class="featured-title">dfvsdfv</p>
+                        <a href="https://github.com/nguy2819/GSAP2-10commandments" target="_blank">
+                            <p class="featured-title">10 Commandments</p>
+                        </a>
                         <span class="tooltiptext">Click to view the raw code on Github</span>
                     </div>
-                    <p class="featured-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="featured-desc">A website about 10 Commandments from Heavenly Father in both Vietnamese and English with basic GSAP animations. </p>
                 </div>
             </div>
-            <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
+            <a class="portfolio-image" href="https://10dieuran.vercel.app/" target="_blank"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
+        </div>
+
+        <div class="portfolio-container transition2">
+            <div class="portfolio-left">
+                <div class="inner">
+                    <p class="subtitle"></p>
+                    <div class="tooltip">
+                        <a href="https://github.com/nguy2819/THREE.JS-ARollingBall" class="featured-title" target="_blank">
+                            <p class="featured-title">A 3D Ball Rolling - THREE.JS</p>
+                        </a>
+                        <span class="tooltiptext">Click to view the raw code on Github</span>
+                    </div>
+                    <p class="featured-desc">This is a 3D Ball Rolling - created by Three.js with an animated circular SVG text path, the circular text path follow the cursor pointer in a smooth/delayed fashion, and using GSAP to create a simple animation on click to link back to my portfolio.</p>
+                </div>
+            </div>
+            <a class="portfolio-image" href="https://nguy2819.github.io/THREE.JS-ARollingBall/" target="_blank"><img src="images/Screen Shot 2021-03-19 at 6.38.56 PM.png"></a>
         </div>
 
         <div class="portfolio-container transition2">
@@ -130,21 +148,7 @@
                     <p class="featured-desc"></p>
                 </div>
             </div>
-            <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
-        </div>
-
-        <div class="portfolio-container transition2">
-            <div class="portfolio-left">
-                <div class="inner">
-                    <p class="subtitle"></p>
-                    <div class="tooltip">
-                        <p class="featured-title">dfvsdfv</p>
-                        <span class="tooltiptext">Click to view the raw code on Github</span>
-                    </div>
-                    <p class="featured-desc"></p>
-                </div>
-            </div>
-            <a href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
+            <a class="portfolio-image" href="#"><img src="images/Screen Shot 2021-02-23 at 6.14.27 PM.png"></a>
         </div>
     </section>
 
@@ -161,6 +165,52 @@
         
     </section>
 
+
+    <!-- The circular text path follow the cursor pointer in a smooth/delayed fashion -->
+
+    <svg class="spinner" xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+        <title>Circular Text Path</title>
+        <defs>
+            <path id="textcircle"
+                d="M250,400
+                    a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+                transform="rotate(12,250,250)"/>
+        </defs>
+        <rect width="100%" height="100%" fill="none" />
+        <text>
+            <textPath xlink:href="#textcircle"
+                    aria-label="All for One &amp; One for All"
+                    textLength="942"> TIEN BORLAND ❤️❤️❤️</textPath>
+        </text>
+    </svg>
+
+    <script>
+
+        const circleSvg = document.querySelector('.spinner')
+
+        let mouseX = 0
+        let mouseY = 0
+        let intv = 0
+
+        window.addEventListener('mousemove', (event) => {
+            // circleSvg.style.top = event.clientY - 45;
+            // circleSvg.style.left = event.clientX - 45;
+            mouseY = (event.clientY / 16) - (45 / 16) + 'rem';
+            mouseX = (event.clientX / 16) - (45 / 16) + 'rem';
+            
+        })
+
+        const mouseMove = () => {
+            intv += 1
+            circleSvg.style.top = mouseY
+            circleSvg.style.left = mouseX
+            circleSvg.style.opacity = Math.abs(Math.sin(intv * 0.025))
+            window.requestAnimationFrame(mouseMove)
+        }
+
+        mouseMove()
+    </script>
 
     <!-- GSAP Animations -->
 
@@ -183,7 +233,7 @@
             gsap.from(image, {
                 scrollTrigger: {
                     trigger: image,
-                    start: 'top center',
+                    start: 'top 75%',
                     toggleActions: 'play none none reverse'
                 },
                 y: -200,
@@ -216,6 +266,6 @@
 
    </script>
 
-
+   
 </body>
 </html>

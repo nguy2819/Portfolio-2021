@@ -30,6 +30,10 @@ body {
   font-family: 'Poppins', arial;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -200,7 +204,7 @@ section {
   padding-top: 7em;
 }
 
-.portfolio-container a {
+.portfolio-image {
   text-align: right;
 }
 
@@ -420,5 +424,49 @@ section {
   left: 30%;
   z-index: 10000;
   pointer-events: none;
+}
+
+text {
+  font-size: 4em;
+  font-family: 'Poppins', serif;
+  font-weight: bold;
+  fill: black;
+}
+
+.spinner {
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: none;
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
+  pointer-events: none;
+  -webkit-transition: top 0.5s, left 0.5s;
+  transition: top 0.5s, left 0.5s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */

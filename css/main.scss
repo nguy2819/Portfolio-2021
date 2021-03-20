@@ -34,6 +34,10 @@
       font-family: 'Poppins', arial;
   }
 
+  body {
+    overflow-x: hidden;
+}
+
   ul {
       list-style-type: none;
       margin: 0;
@@ -198,7 +202,7 @@ section {
     padding-top: 7em;
 }
 
-.portfolio-container a{
+.portfolio-image{
     text-align: right;
 }
 
@@ -407,3 +411,29 @@ section {
     pointer-events: none;
 }
 
+text {
+    font-size: 4em;
+    font-family: 'Poppins', serif;
+    font-weight: bold;
+    fill: black;
+}
+
+.spinner {
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: none;
+    animation: rotation 8s infinite linear;
+    pointer-events: none;
+    transition: top 0.5s, left 0.5s;
+    transition-timing-function: ease-out;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
