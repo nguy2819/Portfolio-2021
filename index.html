@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio 2021</title>
+    <title>Tien Nguyen Borland</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -37,6 +37,10 @@
             <div class="meet stagger1">
                 <span>👇</span>
                 <p>Meet Tien Borland</p>
+                <!-- <button class="meet-tien">
+                    <span class="meet-label">Meet Tien Borland</span>
+                    <svg width="44.419" height="36.507" viewBox="0 0 44.419 36.507"><defs><style>.a{fill: none; stroke: #fff; stroke-width: 2px; stroke-dasharray: 0 103;}</style></defs><path class="a" d="M130.682,218.058114.586,17.462,28.295-34.305" transform="translate(-129.915 -200.579"/></svg>
+                </button> -->
             </div>
             <svg class="stagger1" width="40" height="77" viewBox="0 0 40 77">
                 <g id="scroll" transform="translate(-253 -787)">
@@ -109,6 +113,22 @@
             <div class="portfolio-left">
                 <div class="inner">
                     <p class="subtitle">My Work</p>
+                    <div class="tooltip">
+                        <a href="https://github.com/nguy2819/Utah-Height-Map-THREE.JS" target="_blank">
+                            <p class="featured-title">Utah Valley Height Terrain - THREE.JS</p>
+                        </a>
+                        <span class="tooltiptext">Click to view the raw code on Github</span>
+                    </div>
+                    <p class="featured-desc">A website about Utah Valley with a very cool, interactive 3D Utah Valley height terrain by Three.js. This project is finished by using displacement maps and alpha maps. </p>
+                </div>
+            </div>
+            <a class="portfolio-image" href="https://nguy2819.github.io/Utah-Height-Map-THREE.JS/" target="_blank"><img src="images/Screen Shot 2021-03-25 at 5.13.29 PM.png"></a>
+        </div>
+
+        <div class="portfolio-container transition2">
+            <div class="portfolio-left">
+                <div class="inner">
+                    <p class="subtitle"></p>
                     <div class="tooltip">
                         <a href="https://github.com/nguy2819/GSAP2-10commandments" target="_blank">
                             <p class="featured-title">10 Commandments</p>
@@ -303,6 +323,33 @@
        })
 
    </script>
+
+   <!-- Meet Tien Borland button
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js" integrity="sha512-9F1xsW3TBG87UnyGcF1SrXph249h/eUKPRKJZVhXxW+OeDmCiBvU9/gLfOo5qEvGTjTxOr6YQrY4ImjL90IUyw==" crossorigin="anonymous"></script>
+   <script>
+       gsap.registerPlugin(CSSRulePlugin);
+
+        const labelTl = gsap.timeline({defaults: { ease: 'power2.out', delay: 1}});
+        const btn = document.querySelector('button');
+        const rule = CSSRulePlugin.getRule('button::before');
+  
+        labelTl.to('.meet-label', {opacity: 0, height: 0, position: 'absolute', duration: '.2s'})
+          .to('.meet-tien', {borderRadius: '50%', width: '2.5em', height: '2.5em'}, '-=.5s')
+          .to(rule, {borderRadius: '50%'}, '-=1s')
+        labelTl.pause();
+
+        let hasPlayed = false;
+        btn.addEventListener('click', () => {
+            if(hasPlayed){
+                labelTl.reverse();
+            }
+            else{
+            labelTl.play();
+            }
+            hasPlayed = !hasPlayed;
+        })
+   </script> -->
 
    
 </body>
